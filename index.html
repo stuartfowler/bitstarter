@@ -130,7 +130,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Bitstarter</a>
+          <a class="brand" href="#">GiftCardMate</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -168,45 +168,31 @@
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
         <div class="span5 actions">
-          <div class="row-fluid">
-          <div class="span8 offset2">
-            <div class="row-fluid statistics">
-              <div class="span4">
-                <!-- linediv-l and linediv-r give dividing lines that look
-                different in horizontal and vertical layouts, illustrating
-                media queries. -->
-                <div class="linediv-l">
-                <h3>0</h3> <p>backers</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-c">
-                  <h3>$0</h3> <p>of $10,000</p>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="linediv-r">
-                <h3>30</h3> <p>days left</p>
-                </div>
-              </div>
-            </div>
+	  <div class="span8 offset2">	  
+	    <div class="statistics">
+		  <p>Help us begin. Make a contibution, or share our site on social media!</p>
+	    </div>
           </div>
-          <div class="row-fluid">
           <div class="span10 offset1">
-            <!-- Bootstrap progress bar -->
-            <!-- http://twitter.github.io/bootstrap/components.html#progress -->
-            <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 0%;"></div>
-              <div class="bar bar-warning" style="width: 100%;"></div>
-            </div>
-          </div>
           </div>
           <div class="row-fluid">
           <div class="span6 offset3 order">
             <!-- Standard Bootstrap button. -->
             <!-- http://twitter.github.io/bootstrap/base-css.html#buttons -->
-            <button class="btn btn-success btn-large">Preorder</button>
-          </div>
+	    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	      <input type="hidden" name="cmd" value="_s-xclick">
+	      <table>
+		<tr><td><input type="hidden" name="on0" value="Contributions"><font color="#cccccc">Contribute</font></td></tr><tr><td><select name="os0">
+		      <option value="A little help:">A little help: $1.00 AUD</option>
+		      <option value="A big help:">A big help: $10.00 AUD</option>
+		      <option value="A bigger help:">A bigger help: $100.00 AUD</option>
+		</select> </td></tr>
+	      </table>
+	      <input type="hidden" name="currency_code" value="AUD">
+	      <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+	      <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal"> 
+	  </div>
           </div>
           <div class="row-fluid">
           <div class="span8 offset2 social">
